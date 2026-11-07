@@ -1,21 +1,26 @@
-# Node
-node_modules/
-dist/
-
-# Python
-.venv/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-
-# Django
-db.sqlite3
-staticfiles/
-
 # Environment variables and secrets
 .env
 .env.*
 !.env.example
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Django
+staticfiles/
+media/
+
+# Node
+node_modules/
+dist/
 
 # Editors and operating system
 .vscode/
