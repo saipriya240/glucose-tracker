@@ -1,0 +1,24 @@
+# Node
+node_modules/
+dist/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Django
+db.sqlite3
+staticfiles/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Editors and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

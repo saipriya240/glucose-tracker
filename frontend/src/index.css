@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #8874F5;
+  --color-primary-dark: #715CE5;
+  --color-primary-light: #F0EDFF;
+
+  --color-secondary: #F9EAF1;
+  --color-background: #FAF9FE;
+  --color-surface: #FFFFFF;
+
+  --color-text-main: #29263A;
+  --color-text-muted: #89859B;
+  --color-border: #EEEAF7;
+
+  --radius-card: 1rem;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #29263A;
+  background: #FAF9FE;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: 249 82% 68%;
+  --secondary: 336 62% 96%;
+  --background: 250 33% 99%;
+  --foreground: 250 20% 19%;
+  --border: 250 30% 94%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #FAF9FE;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+::selection {
+  background: #E5DEFF;
+  color: #29263A;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(80, 65, 140, 0.06);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #DCD5F5;
+  border-radius: 10px;
+}
