@@ -1,9 +1,10 @@
-
+import Insights from './components/Insights'
 import { useEffect, useState } from 'react'
 import DailyReport from './components/DailyReport'
 import Auth from './components/Auth'
 import MonthlyReport from './components/MonthlyReport'
 import Readings from './components/Readings'
+import GlucoseCalendar from './components/GlucoseCalendar'
 import { authAPI, readingsAPI } from './services/api'
 
 import {
@@ -42,6 +43,7 @@ const navigation = [
   { name: 'Daily Report', icon: CalendarDays },
   { name: 'Monthly Report', icon: ChartNoAxesCombined },
   { name: 'Insights', icon: Lightbulb },
+  { name: 'Calendar', icon: CalendarDays },
 ]
 
 const SLOT_ORDER = {
@@ -875,6 +877,10 @@ function Dashboard({ user, onLogout }) {
   <DailyReport user={user} />
 ) : activePage === 'Monthly Report' ? (
   <MonthlyReport user={user} />
+) : activePage === 'Insights' ? (
+  <Insights user={user} />
+) : activePage === 'Calendar' ? (
+  <GlucoseCalendar user={user} />
 ) : (
             <section className="rounded-2xl border border-[#EEEAF7] bg-white p-8 text-center shadow-sm">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F0EDFF] text-[#8874F5]">
