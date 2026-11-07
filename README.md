@@ -1,476 +1,177 @@
-\# Gluco – Blood Glucose Tracker
+#  Gluco — Blood Glucose Tracker
 
+<p align="center">
+  <img src="https://img.shields.io/badge/React-2026-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Django-Backend-092E20?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+</p>
 
+<p align="center">
+  <b>Track Better. Understand Better. Stay Informed.</b>
+  <br />
+  A full-stack application for tracking blood glucose levels, analyzing trends, and managing daily health records.
+</p>
 
-\*\*Gluco\*\* is a full-stack blood glucose tracking application designed to help users record, organize, and understand their glucose readings through a clean and interactive dashboard.
+---
 
+## ✨ Overview
 
+**Gluco** is a full-stack blood glucose tracking platform designed to make daily glucose monitoring simple and organized.
 
-The application allows users to manage daily readings, monitor glucose trends, view reports, explore historical data, and configure personal tracking ranges.
+With an interactive dashboard, historical reports, personalized tracking ranges, and visual analytics, Gluco helps users understand their glucose patterns and keep their records in one place.
 
+## 🚀 Key Features
 
+| Feature | Description |
+|:---|:---|
+| 📊 Dashboard | Monitor average, highest, and lowest glucose readings. |
+| 🩸 Readings | Add, edit, delete, and manage daily glucose records. |
+| 📈 Analytics | Explore glucose trends through interactive charts. |
+| 📅 Calendar | Navigate historical readings by date and month. |
+| 📋 Daily Reports | Review daily glucose summaries and patterns. |
+| 📆 Monthly Reports | Analyze monthly averages and historical trends. |
+| 👤 Profile | Manage account details and personal tracking ranges. |
+| 🔐 Authentication | Secure login, registration, and JWT authentication. |
 
-\## Features
+## 🛠️ Built With
 
+<p>
+  <img src="https://skillicons.dev/icons?i=react,vite,js,tailwind,python,django,postgres,git,github" />
+</p>
 
-
-\### Authentication
-
-\- User registration and login.
-
-\- JWT-based authentication.
-
-\- Protected user-specific data.
-
-\- Secure access to personal readings and profile information.
-
-
-
-\### Dashboard
-
-\- Overview of recorded glucose readings.
-
-\- Average, highest, and lowest glucose values.
-
-\- Visual representation of glucose trends.
-
-\- Configurable glucose target range.
-
-
-
-\### Glucose Readings
-
-\- Add, edit, and delete glucose readings.
-
-\- Record readings across four daily time slots:
-
-&#x20; - Morning (Fasting)
-
-&#x20; - After Breakfast
-
-&#x20; - After Lunch
-
-&#x20; - After Dinner
-
-\- View reading history.
-
-\- Validate glucose values and prevent duplicate readings for the same date and time slot.
-
-
-
-\### Reports and Analytics
-
-\- Daily glucose reports.
-
-\- Monthly glucose reports.
-
-\- Interactive charts and historical comparisons.
-
-\- Average, highest, and lowest reading analysis.
-
-\- Reading patterns and tracking insights.
-
-
-
-\### Glucose Calendar
-
-\- Calendar-based view of historical readings.
-
-\- Visual identification of recorded glucose data.
-
-\- Easy navigation between dates and months.
-
-
-
-\### Profile and Preferences
-
-\- View account information.
-
-\- Configure personal glucose tracking ranges.
-
-\- Save preferences to the backend.
-
-
-
-\## Tech Stack
-
-
-
-| Layer | Technologies |
-
-|---|---|
-
+| Category | Technology |
+|:---|:---|
 | Frontend | React, Vite, JavaScript |
-
 | Styling | Tailwind CSS |
-
+| Backend | Python, Django |
+| API | Django REST Framework |
+| Database | PostgreSQL |
+| Authentication | JWT / SimpleJWT |
 | Charts | Recharts |
-
 | Icons | Lucide React |
 
-| Backend | Python, Django |
+## 📸 Application Modules
 
-| API | Django REST Framework |
+- **Dashboard** — A centralized overview of glucose readings and statistics.
+- **Reading Management** — Four daily tracking slots: Morning (Fasting), After Breakfast, After Lunch, and After Dinner.
+- **Reports & Insights** — Daily and monthly analysis with interactive visualizations.
+- **Glucose Calendar** — Historical tracking with date-based navigation.
+- **Profile Management** — Account information and personalized tracking preferences.
 
-| Authentication | JWT (SimpleJWT) |
-
-| Database | PostgreSQL |
-
-| API Communication | Fetch API |
-
-
-
-\## Project Structure
-
-
+## 📁 Project Structure
 
 ```text
-
 glucotracker/
-
 │
-
 ├── frontend/
-
-│   ├── public/
-
 │   ├── src/
-
 │   │   ├── components/
-
 │   │   │   ├── Auth.jsx
-
 │   │   │   ├── Readings.jsx
-
 │   │   │   ├── DailyReport.jsx
-
 │   │   │   ├── MonthlyReport.jsx
-
 │   │   │   ├── Insights.jsx
-
 │   │   │   ├── GlucoseCalendar.jsx
-
 │   │   │   └── Profile.jsx
-
-│   │   │
-
 │   │   ├── services/
-
 │   │   │   └── api.js
-
-│   │   │
-
 │   │   ├── App.jsx
-
 │   │   ├── main.jsx
-
 │   │   └── index.css
-
-│   │
-
-│   ├── package.json
-
-│   └── vite.config.js
-
+│   └── package.json
 │
-
 ├── backend/
-
 │   ├── config/
-
 │   ├── accounts/
-
 │   ├── readings/
-
 │   └── manage.py
-
 │
-
 ├── .gitignore
-
 └── README.md
-
 ```
 
+## ⚙️ Getting Started
 
+### Prerequisites
 
-\## Getting Started
+- Python 3.11+
+- Node.js and npm
+- PostgreSQL
+- Git
 
-
-
-Follow these instructions to run Gluco locally.
-
-
-
-\### Prerequisites
-
-
-
-Install the following before starting:
-
-
-
-\- Python 3.11+
-
-\- Node.js and npm
-
-\- PostgreSQL
-
-\- Git
-
-
-
-\### 1. Clone the Repository
-
-
+### 1. Clone the repository
 
 ```bash
-
-git clone <YOUR\_GITHUB\_REPOSITORY\_URL>
-
+git clone <YOUR_GITHUB_REPOSITORY_URL>
 cd glucotracker
-
 ```
 
-
-
-\### 2. Backend Setup
-
-
-
-Navigate to the backend:
-
-
-
-```bash
-
-cd backend
-
-```
-
-
-
-Create and activate a virtual environment from the project root if one does not already exist:
-
-
+### 2. Set up the backend
 
 ```powershell
-
-cd ..
-
 python -m venv .venv
-
-.\\.venv\\Scripts\\Activate.ps1
-
+.\.venv\Scripts\Activate.ps1
 cd backend
-
 ```
-
-
-
-Install Python dependencies:
-
-
-
-```bash
-
-pip install django djangorestframework django-cors-headers djangorestframework-simplejwt psycopg\[binary] python-dotenv
-
-```
-
-
-
-Configure your environment variables and PostgreSQL database according to the Django database settings.
-
-
-
-Apply database migrations:
-
-
-
-```bash
-
-python manage.py migrate
-
-```
-
-
-
-Start the backend server:
-
-
-
-```bash
-
-python manage.py runserver
-
-```
-
-
-
-Backend runs by default at:
-
-
-
-`http://127.0.0.1:8000/`
-
-
-
-\### 3. Frontend Setup
-
-
-
-Open a second terminal:
-
-
-
-```bash
-
-cd frontend
-
-```
-
-
 
 Install dependencies:
 
+```bash
+pip install django djangorestframework django-cors-headers djangorestframework-simplejwt "psycopg[binary]" python-dotenv
+```
 
+Configure your PostgreSQL database and environment variables.
+
+Run migrations and start the server:
 
 ```bash
+python manage.py migrate
+python manage.py runserver
+```
 
+**Backend:** `http://127.0.0.1:8000/`
+
+### 3. Set up the frontend
+
+Open a new terminal:
+
+```bash
+cd frontend
 npm install
-
-```
-
-
-
-Start the development server:
-
-
-
-```bash
-
 npm run dev
-
 ```
 
+**Frontend:** `http://localhost:5173/`
 
+## 🛡️ Data Validation & Security
 
-Frontend runs by default at:
+- Glucose readings restricted to 40–600 mg/dL.
+- Whole-number glucose values.
+- Duplicate date and time-slot prevention.
+- Maximum of four readings per day.
+- Future-date restrictions.
+- JWT-protected API endpoints.
+- User-specific record access.
+- Environment-based configuration for sensitive credentials.
 
+## 🔮 Future Enhancements
 
+- Downloadable glucose reports.
+- Advanced analytics and trend detection.
+- Automated testing.
+- Production deployment and monitoring.
+- Enhanced accessibility.
 
-`http://localhost:5173/`
+## ⚠️ Disclaimer
 
+Gluco is an informational tracking and visualization application. It does not provide medical diagnosis or treatment and is not a substitute for professional medical advice.
 
+---
 
-\## Application Workflow
+## 👩‍💻 Author
 
+**Sai Priya Neeli**
 
-
-1\. Register a new account or log in.
-
-2\. Open the dashboard to view your glucose tracking overview.
-
-3\. Add readings for the available daily time slots.
-
-4\. Review daily and monthly reports.
-
-5\. Explore trends and insights.
-
-6\. Use the calendar to navigate historical readings.
-
-7\. Update your personal tracking range in Profile.
-
-
-
-\## Data Validation
-
-
-
-Gluco includes validation to maintain consistent reading records:
-
-
-
-\- Glucose values must be whole numbers.
-
-\- Accepted reading values are between 40 and 600 mg/dL.
-
-\- A user cannot record duplicate readings for the same date and time slot.
-
-\- A maximum of four readings can be recorded per day.
-
-\- Future dates are restricted.
-
-\- Users can access and manage only their own records.
-
-
-
-\## Security
-
-
-
-\- JWT-based authentication.
-
-\- Protected API endpoints.
-
-\- User-specific data access.
-
-\- Backend-side validation.
-
-\- Environment-based configuration for sensitive settings.
-
-
-
-\*\*Important:\*\* Never commit `.env` files, database passwords, secret keys, or access tokens to GitHub.
-
-
-
-\## Future Improvements
-
-
-
-Potential enhancements include:
-
-
-
-\- Automated test coverage for frontend and backend.
-
-\- Improved authentication and token refresh handling.
-
-\- Data export and downloadable reports.
-
-\- More detailed analytics and visualizations.
-
-\- Deployment and production monitoring.
-
-\- Additional accessibility and responsive design improvements.
-
-
-
-\## Disclaimer
-
-
-
-Gluco is a personal glucose tracking and data visualization application. Its configured tracking ranges and analytical summaries are for informational purposes only and are not a substitute for professional medical advice, diagnosis, or treatment.
-
-
-
-\## Author
-
-
-
-\*\*Sai Priya Neeli\*\*
-
-
-
-\- GitHub: \[saipriya240](https://github.com/saipriya240)
-
-
-
-\---
-
-
-
-\*Built with React, Django, and PostgreSQL.\*
+[![GitHub](https://img.shields.io/badge/GitHub-saipriya240-181717?style=for-the-badge&logo=github)](https://github.com/saipriya240)
 
