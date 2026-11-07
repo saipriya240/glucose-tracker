@@ -62,6 +62,8 @@ async function request(endpoint, options = {}, authenticated = true) {
     const message =
       data?.detail ||
       data?.non_field_errors?.[0] ||
+      data?.target_low?.[0] ||
+      data?.target_high?.[0] ||
       'Something went wrong. Please try again.'
 
     throw new Error(message)
@@ -99,6 +101,13 @@ export const authAPI = {
 
   async getProfile() {
     return request('/accounts/profile/')
+  },
+
+  async updateProfile(settings) {
+    return request('/accounts/profile/', {
+      method: 'PATCH',
+      body: JSON.stringify(settings),
+    })
   },
 
   logout() {

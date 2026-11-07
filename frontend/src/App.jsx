@@ -4,6 +4,7 @@ import DailyReport from './components/DailyReport'
 import Auth from './components/Auth'
 import MonthlyReport from './components/MonthlyReport'
 import Readings from './components/Readings'
+import Profile from './components/Profile'
 import GlucoseCalendar from './components/GlucoseCalendar'
 import { authAPI, readingsAPI } from './services/api'
 
@@ -141,7 +142,7 @@ function CustomTooltip({ active, payload, label }) {
   )
 }
 
-function Dashboard({ user, onLogout }) {
+function Dashboard({ user, onLogout, onProfileUpdated }) {
   const [activePage, setActivePage] = useState('Dashboard')
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
@@ -395,17 +396,6 @@ function Dashboard({ user, onLogout }) {
           >
             <UserRound size={19} />
             Profile
-          </button>
-
-          <button
-            onClick={() => {
-              setActivePage('Settings')
-              setSidebarOpen(false)
-            }}
-            className="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-sm font-semibold text-[#89859B] hover:bg-[#FAF9FE]"
-          >
-            <Settings size={19} />
-            Settings
           </button>
 
           <button
@@ -881,6 +871,13 @@ function Dashboard({ user, onLogout }) {
   <Insights user={user} />
 ) : activePage === 'Calendar' ? (
   <GlucoseCalendar user={user} />
+) : activePage === 'Profile' ? (
+  <Profile
+    user={user}
+    activeSection="Profile"
+    onProfileUpdated={onProfileUpdated}
+  />
+
 ) : (
             <section className="rounded-2xl border border-[#EEEAF7] bg-white p-8 text-center shadow-sm">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F0EDFF] text-[#8874F5]">
@@ -962,6 +959,7 @@ function App() {
     <Dashboard
       user={user}
       onLogout={handleLogout}
+      onProfileUpdated={setUser}
     />
   )
 }
