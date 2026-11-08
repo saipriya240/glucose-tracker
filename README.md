@@ -21,6 +21,25 @@
 
 With an interactive dashboard, historical reports, personalized tracking ranges, and visual analytics, Gluco helps users understand their glucose patterns and keep their records in one place.
 
+## 📸 Application Preview
+
+<p align="center">
+  <img src="Screenshots/Screenshot%202026-11-07%20223823.png" width="48%" alt="Gluco Application Screenshot 1" />
+  <img src="Screenshots/Screenshot%202026-11-07%20223845.png" width="48%" alt="Gluco Application Screenshot 2" />
+</p>
+
+
+<p align="center">
+  <img src="Screenshots/Screenshot%202026-11-07%20223911.png" width="48%" alt="Gluco Application Screenshot 3" />
+  <img src="Screenshots/Screenshot%202026-11-07%20223939.png" width="48%" alt="Gluco Application Screenshot 4" />
+</p>
+
+
+<p align="center">
+  <img src="Screenshots/Screenshot%202026-11-07%20224009.png" width="48%" alt="Gluco Application Screenshot 5" />
+  <img src="Screenshots/Screenshot%202026-11-07%20224026.png" width="48%" alt="Gluco Application Screenshot 6" />
+</p>
+
 ## 🚀 Key Features
 
 | Feature | Description |
