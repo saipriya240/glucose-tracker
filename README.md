@@ -91,59 +91,6 @@ glucotracker/
 └── README.md
 ```
 
-## ⚙️ Getting Started
-
-### Prerequisites
-
-- Python 3.11+
-- Node.js and npm
-- PostgreSQL
-- Git
-
-### 1. Clone the repository
-
-```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd glucotracker
-```
-
-### 2. Set up the backend
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-cd backend
-```
-
-Install dependencies:
-
-```bash
-pip install django djangorestframework django-cors-headers djangorestframework-simplejwt "psycopg[binary]" python-dotenv
-```
-
-Configure your PostgreSQL database and environment variables.
-
-Run migrations and start the server:
-
-```bash
-python manage.py migrate
-python manage.py runserver
-```
-
-**Backend:** `http://127.0.0.1:8000/`
-
-### 3. Set up the frontend
-
-Open a new terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-**Frontend:** `http://localhost:5173/`
-
 ## 🛡️ Data Validation & Security
 
 - Glucose readings restricted to 40–600 mg/dL.
